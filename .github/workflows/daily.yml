@@ -25,13 +25,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Названия подземелий на трёх языках скрипт берёт из переводов ядра.
-      - uses: actions/checkout@v4
-        if: github.event_name != 'push'
-        with:
-          repository: RexZep-dev/TrialGearFinder
-          path: core
-
       - uses: actions/setup-node@v4
         if: github.event_name != 'push'
         with:
@@ -41,7 +34,7 @@ jobs:
         if: github.event_name != 'push'
         id: sync
         run: |
-          TGF_CORE="$GITHUB_WORKSPACE/core" node tools/sync.js
+          node tools/sync.js
           # Дата снимка меняется всегда; выпускаем, только если поменялось остальное.
           if git diff --quiet -I'generatedAt' -- db/Database.lua; then
             echo "Рейтинг не изменился - выпуска нет."

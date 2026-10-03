@@ -1,0 +1,2067 @@
+[
+ {
+  "ru": "  |cff3fc7ebТайм Волк|r",
+  "en": "  |cff3fc7ebTimewalking|r",
+  "zh": "  |cff3fc7eb时空漫游|r"
+ },
+ {
+  "ru": "  |cff5fd35fвыше гайда|r",
+  "en": "  |cff5fd35fabove guide|r",
+  "zh": "  |cff5fd35f高于攻略|r"
+ },
+ {
+  "ru": "  |cff9a9a9aнет в гайде|r",
+  "en": "  |cff9a9a9anot in guide|r",
+  "zh": "  |cff9a9a9a攻略中没有|r"
+ },
+ {
+  "ru": "  |cff9a9a9aпред-BiS|r",
+  "en": "  |cff9a9a9apre-BiS|r",
+  "zh": "  |cff9a9a9a准BiS|r"
+ },
+ {
+  "ru": " - чара: ",
+  "en": " - enchant: ",
+  "zh": " - 附魔："
+ },
+ {
+  "ru": " (номера нет, в симе не учтена)",
+  "en": " (no id, not counted in the sim)",
+  "zh": "（没有编号，模拟中未计入）"
+ },
+ {
+  "ru": "— двуручное",
+  "en": "— two-handed",
+  "zh": "— 双手"
+ },
+ {
+  "ru": ": Все",
+  "en": ": All",
+  "zh": "：全部"
+ },
+ {
+  "ru": "[ДД]",
+  "en": "[DPS]",
+  "zh": "[输出]"
+ },
+ {
+  "ru": "[Хил]",
+  "en": "[Healer]",
+  "zh": "[治疗]"
+ },
+ {
+  "ru": "[Танк]",
+  "en": "[Tank]",
+  "zh": "[坦克]"
+ },
+ {
+  "ru": "[Танк] нишевая смесь Квинтэссенции и Скаломола",
+  "en": "[Tank] niche mix of Quintessence and Rumbling Mountain",
+  "zh": "[坦克] 精华与碎山的利基组合"
+ },
+ {
+  "ru": "[TGF] ссылка: ",
+  "en": "[TGF] link: ",
+  "zh": "[TGF] 链接："
+ },
+ {
+  "ru": "+10 к силе",
+  "en": "+10 Strength",
+  "zh": "+10 力量"
+ },
+ {
+  "ru": "+11 к силе заклинаний",
+  "en": "+11 Spell Power",
+  "zh": "+11 法术强度"
+ },
+ {
+  "ru": "+12 к ловкости",
+  "en": "+12 Agility",
+  "zh": "+12 敏捷"
+ },
+ {
+  "ru": "+2 к силе атаки и +2 к вероятности критического удара",
+  "en": "+2 Attack Power and +2 Critical Strike",
+  "zh": "+2 攻击强度，+2 爆击"
+ },
+ {
+  "ru": "+2 к искусности и небольшой бонус к скорости",
+  "en": "+2 Mastery and minor run speed increase",
+  "zh": "+2 精通，略微提高移动速度"
+ },
+ {
+  "ru": "+3 к ловкости и +2 к вероятности критического удара",
+  "en": "+3 Agility and +2 Critical Strike",
+  "zh": "+3 敏捷，+2 爆击"
+ },
+ {
+  "ru": "+3 ко всем характеристикам",
+  "en": "+3 All Stats",
+  "zh": "+3 所有属性"
+ },
+ {
+  "ru": "+3 к силе атаки",
+  "en": "+3 Attack Power",
+  "zh": "+3 攻击强度"
+ },
+ {
+  "ru": "+3 к скорости",
+  "en": "+3 Haste",
+  "zh": "+3 急速"
+ },
+ {
+  "ru": "+3 к интеллекту и +2 к универсальности",
+  "en": "+3 Intellect and +2 Versatility",
+  "zh": "+3 智力，+2 全能"
+ },
+ {
+  "ru": "+3 к силе заклинаний",
+  "en": "+3 Spell Power",
+  "zh": "+3 法术强度"
+ },
+ {
+  "ru": "+3 к силе заклинаний и +1 к вероятности критического удара",
+  "en": "+3 Spell Power and +1 Critical Strike",
+  "zh": "+3 法术强度，+1 爆击"
+ },
+ {
+  "ru": "+3 к выносливости и небольшое увеличение скорости",
+  "en": "+3 Stamina and minor run speed increase",
+  "zh": "+3 耐力，略微提高移动速度"
+ },
+ {
+  "ru": "+3 к силе и +2 к вероятности критического удара",
+  "en": "+3 Strength and +2 Critical Strike",
+  "zh": "+3 力量，+2 爆击"
+ },
+ {
+  "ru": "+3 к универсальности",
+  "en": "+3 Versatility",
+  "zh": "+3 全能"
+ },
+ {
+  "ru": "+4 к ловкости",
+  "en": "+4 Agility",
+  "zh": "+4 敏捷"
+ },
+ {
+  "ru": "+4 к вероятности критического удара",
+  "en": "+4 Critical Strike",
+  "zh": "+4 爆击"
+ },
+ {
+  "ru": "+4 к скорости",
+  "en": "+4 Haste",
+  "zh": "+4 急速"
+ },
+ {
+  "ru": "+4 к интеллекту",
+  "en": "+4 Intellect",
+  "zh": "+4 智力"
+ },
+ {
+  "ru": "+4 к искусности",
+  "en": "+4 Mastery",
+  "zh": "+4 精通"
+ },
+ {
+  "ru": "+4 к основной характеристике",
+  "en": "+4 Primary Stat",
+  "zh": "+4 主属性"
+ },
+ {
+  "ru": "+4 к силе заклинаний",
+  "en": "+4 Spell Power",
+  "zh": "+4 法术强度"
+ },
+ {
+  "ru": "+4 к выносливости",
+  "en": "+4 Stamina",
+  "zh": "+4 耐力"
+ },
+ {
+  "ru": "+4 к силе",
+  "en": "+4 Strength",
+  "zh": "+4 力量"
+ },
+ {
+  "ru": "+4 к универсальности",
+  "en": "+4 Versatility",
+  "zh": "+4 全能"
+ },
+ {
+  "ru": "+5 к интеллекту и +3 к выносливости",
+  "en": "+5 Intellect and +3 Stamina",
+  "zh": "+5 智力，+3 耐力"
+ },
+ {
+  "ru": "+5 к интеллекту и +5% маны",
+  "en": "+5 Intellect and +5% Mana",
+  "zh": "+5 智力，+5% 法力"
+ },
+ {
+  "ru": "|cFF86C7BD[TGF]|r Скопировать отчёт: /tgf copy",
+  "en": "|cFF86C7BD[TGF]|r Copy the report: /tgf copy",
+  "zh": "|cFF86C7BD[TGF]|r 复制报告：/tgf copy"
+ },
+ {
+  "ru": "|cFF86C7BD[TGF]|r Скопировать: /tgf copy",
+  "en": "|cFF86C7BD[TGF]|r Copy: /tgf copy",
+  "zh": "|cFF86C7BD[TGF]|r 复制：/tgf copy"
+ },
+ {
+  "ru": "|cFF86C7BD[TGF]|r Окно сборок ещё не открывалось: /tgf bis",
+  "en": "|cFF86C7BD[TGF]|r Open the builds window first: /tgf bis",
+  "zh": "|cFF86C7BD[TGF]|r 配装窗口尚未打开：/tgf bis"
+ },
+ {
+  "ru": "|cFF888888Загрузка данных...|r",
+  "en": "|cFF888888Loading...|r",
+  "zh": "|cFF888888加载中...|r"
+ },
+ {
+  "ru": "|cFF888888Нет предметов под эти фильтры.|r",
+  "en": "|cFF888888No items match these filters.|r",
+  "zh": "|cFF888888没有符合筛选条件的物品。|r"
+ },
+ {
+  "ru": "|cFFFFD100[TGF]|r /tgf dj все  — все экспансии сразу",
+  "en": "|cFFFFD100[TGF]|r /tgf dj all  — every expansion at once",
+  "zh": "|cFFFFD100[TGF]|r /tgf dj all  — 所有资料片"
+ },
+ {
+  "ru": "|cFFFFD100[TGF]|r /tgf dj кузня душ  — один данж",
+  "en": "|cFFFFD100[TGF]|r /tgf dj forge of souls  — one dungeon",
+  "zh": "|cFFFFD100[TGF]|r /tgf dj 灵魂洪炉  — 一个地下城"
+ },
+ {
+  "ru": "|cFFFFD100[TGF]|r /tgf dj список  — чеклист по данжам",
+  "en": "|cFFFFD100[TGF]|r /tgf dj list  — dungeon checklist",
+  "zh": "|cFFFFD100[TGF]|r /tgf dj list  — 地下城清单"
+ },
+ {
+  "ru": "|cFFFFD100[TGF]|r /tgf tw все  — все экспансии сразу",
+  "en": "|cFFFFD100[TGF]|r /tgf tw all  — every expansion at once",
+  "zh": "|cFFFFD100[TGF]|r /tgf tw all  — 所有资料片"
+ },
+ {
+  "ru": "|cFFFFD100[TGF]|r Время Хроми: Настоящее.",
+  "en": "|cFFFFD100[TGF]|r Chromie Time: Present.",
+  "zh": "|cFFFFD100[TGF]|r 克罗米时间：现在。"
+ },
+ {
+  "ru": "|cFFFFD100[TGF]|r Дамп уже идёт, подожди.",
+  "en": "|cFFFFD100[TGF]|r Dump already running, wait.",
+  "zh": "|cFFFFD100[TGF]|r 导出已在进行中，请稍候。"
+ },
+ {
+  "ru": "|cFFFFD100[TGF]|r Снимаю все экспансии.",
+  "en": "|cFFFFD100[TGF]|r Dumping all expansions.",
+  "zh": "|cFFFFD100[TGF]|r 正在导出所有资料片。"
+ },
+ {
+  "ru": "|cFFFFD100[TGF]|r Журнал подземелий недоступен.",
+  "en": "|cFFFFD100[TGF]|r Encounter Journal is not available.",
+  "zh": "|cFFFFD100[TGF]|r 地下城冒险指南不可用。"
+ },
+ {
+  "ru": "|cFFFFD100[TGF]|r Меток пока не запомнено.",
+  "en": "|cFFFFD100[TGF]|r No pins saved yet.",
+  "zh": "|cFFFFD100[TGF]|r 尚未保存标记。"
+ },
+ {
+  "ru": "|cFFFFD100[TGF]|r В журнале нет обычных подземелий.",
+  "en": "|cFFFFD100[TGF]|r The journal has no regular dungeons.",
+  "zh": "|cFFFFD100[TGF]|r 冒险指南中没有普通地下城。"
+ },
+ {
+  "ru": "|cFFFFD100[TGF]|r Без метки из журнала: /tgf pin список",
+  "en": "|cFFFFD100[TGF]|r Unpinned from the journal: /tgf pin list",
+  "zh": "|cFFFFD100[TGF]|r 冒险指南中未标记的：/tgf pin list"
+ },
+ {
+  "ru": "Выпала не BiS-версия",
+  "en": "A non-BiS version dropped",
+  "zh": "掉落了非BiS版本"
+ },
+ {
+  "ru": "Колдовство",
+  "en": "Affliction",
+  "zh": "痛苦"
+ },
+ {
+  "ru": "После /tgf scan или /tgf gems — здесь их вывод",
+  "en": "After /tgf scan or /tgf gems, their output is here",
+  "zh": "/tgf scan 或 /tgf gems 后，其输出显示在此处"
+ },
+ {
+  "ru": "Ловк.",
+  "en": "Agi",
+  "zh": "敏"
+ },
+ {
+  "ru": "Ловкость",
+  "en": "Agility",
+  "zh": "敏捷"
+ },
+ {
+  "ru": "к ловкости",
+  "en": "Agility",
+  "zh": "敏捷"
+ },
+ {
+  "ru": "Ан'кахет: Старое Королевство",
+  "en": "Ahn'kahet: The Old Kingdom",
+  "zh": "安卡赫特：古代王国"
+ },
+ {
+  "ru": "Академия Алгет'ар",
+  "en": "Algeth'ar Academy",
+  "zh": "艾杰斯亚学院"
+ },
+ {
+  "ru": "Все",
+  "en": "All",
+  "zh": "全部"
+ },
+ {
+  "ru": "Альянс",
+  "en": "Alliance",
+  "zh": "联盟"
+ },
+ {
+  "ru": "апреля",
+  "en": "April",
+  "zh": "4月"
+ },
+ {
+  "ru": "Тайная магия",
+  "en": "Arcane",
+  "zh": "奥术"
+ },
+ {
+  "ru": "Броня",
+  "en": "Armor",
+  "zh": "护甲"
+ },
+ {
+  "ru": "Оружие",
+  "en": "Arms",
+  "zh": "武器"
+ },
+ {
+  "ru": "Оружие: сборка Кавочавоо",
+  "en": "Arms: Кавочавоо's build",
+  "zh": "武器：Кавочавоо 的配装"
+ },
+ {
+  "ru": "Ликвидация",
+  "en": "Assassination",
+  "zh": "奇袭"
+ },
+ {
+  "ru": "Штурм Аметистовой крепости",
+  "en": "Assault on Violet Hold",
+  "zh": "紫罗兰监狱突袭"
+ },
+ {
+  "ru": "Атал'Дазар",
+  "en": "Atal'Dazar",
+  "zh": "阿塔达萨"
+ },
+ {
+  "ru": "Аукенайские гробницы",
+  "en": "Auchenai Crypts",
+  "zh": "奥金尼地穴"
+ },
+ {
+  "ru": "Аукиндон",
+  "en": "Auchindoun",
+  "zh": "奥金顿"
+ },
+ {
+  "ru": "Насыщатель",
+  "en": "Augmentation",
+  "zh": "增辉"
+ },
+ {
+  "ru": "августа",
+  "en": "August",
+  "zh": "8月"
+ },
+ {
+  "ru": "Азжол-Неруб",
+  "en": "Azjol-Nerub",
+  "zh": "艾卓-尼鲁布"
+ },
+ {
+  "ru": "Спина",
+  "en": "Back",
+  "zh": "背部"
+ },
+ {
+  "ru": "Баланс",
+  "en": "Balance",
+  "zh": "平衡"
+ },
+ {
+  "ru": "Баланс: лучшая из 14 сборок двадцаток гильдии",
+  "en": "Balance: best of 14 guild level-20 builds",
+  "zh": "平衡：公会 14 套 20 级配装中最佳"
+ },
+ {
+  "ru": "Битва за Азерот",
+  "en": "Battle for Azeroth",
+  "zh": "争霸艾泽拉斯"
+ },
+ {
+  "ru": "Повелитель зверей",
+  "en": "Beast Mastery",
+  "zh": "野兽控制"
+ },
+ {
+  "ru": "BiS-версия на руках",
+  "en": "BiS version in bags",
+  "zh": "BiS版本已在背包中"
+ },
+ {
+  "ru": "Крепость Черной Ладьи",
+  "en": "Black Rook Hold",
+  "zh": "黑鸦堡垒"
+ },
+ {
+  "ru": "Пещеры Черной горы",
+  "en": "Blackrock Caverns",
+  "zh": "黑石岩窟"
+ },
+ {
+  "ru": "Глубины Черной горы",
+  "en": "Blackrock Depths",
+  "zh": "黑石深渊"
+ },
+ {
+  "ru": "Кровь",
+  "en": "Blood",
+  "zh": "鲜血"
+ },
+ {
+  "ru": "Кровь: лучшая из сборок двадцаток гильдии",
+  "en": "Blood: best of the guild level-20 builds",
+  "zh": "鲜血：公会 20 级配装中最佳"
+ },
+ {
+  "ru": "Шлаковые шахты Кровавого Молота",
+  "en": "Bloodmaul Slag Mines",
+  "zh": "血槌炉渣矿井"
+ },
+ {
+  "ru": "синее",
+  "en": "blue",
+  "zh": "蓝色"
+ },
+ {
+  "ru": "синее гнездо",
+  "en": "blue socket",
+  "zh": "蓝色插槽"
+ },
+ {
+  "ru": "синее гнёзда",
+  "en": "blue sockets",
+  "zh": "蓝色插槽"
+ },
+ {
+  "ru": "Лощина Бурошкуров",
+  "en": "Brackenhide Hollow",
+  "zh": "蕨皮山谷"
+ },
+ {
+  "ru": "Хмелевар",
+  "en": "Brewmaster",
+  "zh": "酒仙"
+ },
+ {
+  "ru": "Расколотые острова (мировой дроп)",
+  "en": "Broken Isles (world drop)",
+  "zh": "破碎群岛（世界掉落）"
+ },
+ {
+  "ru": "Сборка",
+  "en": "Build",
+  "zh": "配装"
+ },
+ {
+  "ru": "ИТОГ СБОРКИ",
+  "en": "BUILD TOTALS",
+  "zh": "配装总计"
+ },
+ {
+  "ru": "Сборки",
+  "en": "Builds",
+  "zh": "配装"
+ },
+ {
+  "ru": "Катаклизм",
+  "en": "Cataclysm",
+  "zh": "大灾变"
+ },
+ {
+  "ru": "Персонажи",
+  "en": "Characters",
+  "zh": "角色"
+ },
+ {
+  "ru": "Диаграмма",
+  "en": "Chart",
+  "zh": "图表"
+ },
+ {
+  "ru": "Диаграммы",
+  "en": "Charts",
+  "zh": "图表"
+ },
+ {
+  "ru": "Чат пуст.",
+  "en": "Chat is empty.",
+  "zh": "聊天为空。"
+ },
+ {
+  "ru": "Грудь",
+  "en": "Chest",
+  "zh": "胸部"
+ },
+ {
+  "ru": "Китайский",
+  "en": "Chinese",
+  "zh": "中文"
+ },
+ {
+  "ru": "Класс",
+  "en": "Class",
+  "zh": "职业"
+ },
+ {
+  "ru": "Классика",
+  "en": "Classic",
+  "zh": "经典旧世"
+ },
+ {
+  "ru": "Классические земли (мировой дроп)",
+  "en": "Classic zones (world drop)",
+  "zh": "经典旧世区域（世界掉落）"
+ },
+ {
+  "ru": "Щелчок - открыть окно",
+  "en": "Click to open the window",
+  "zh": "点击打开窗口"
+ },
+ {
+  "ru": "Щелчок - поставить метку на карте",
+  "en": "Click to put a marker on the map",
+  "zh": "点击在地图上放置标记"
+ },
+ {
+  "ru": "Ткань",
+  "en": "Cloth",
+  "zh": "布甲"
+ },
+ {
+  "ru": "шестерёнка",
+  "en": "cogwheel",
+  "zh": "齿轮"
+ },
+ {
+  "ru": "шестерёнка гнездо",
+  "en": "cogwheel socket",
+  "zh": "齿轮插槽"
+ },
+ {
+  "ru": "шестерёнка гнёзда",
+  "en": "cogwheel sockets",
+  "zh": "齿轮插槽"
+ },
+ {
+  "ru": "Свернуть сборки",
+  "en": "Collapse builds",
+  "zh": "收起配装"
+ },
+ {
+  "ru": "Комьюнити",
+  "en": "Community",
+  "zh": "社区"
+ },
+ {
+  "ru": "Сравнить",
+  "en": "Compare",
+  "zh": "对比"
+ },
+ {
+  "ru": "Сравнить сборку с надетым",
+  "en": "Compare the build with your gear",
+  "zh": "将配装与当前装备对比"
+ },
+ {
+  "ru": "Копировать из чата — Ctrl+A, Ctrl+C",
+  "en": "Copy from chat — Ctrl+A, Ctrl+C",
+  "zh": "从聊天复制 — Ctrl+A、Ctrl+C"
+ },
+ {
+  "ru": "Копировать из чата (TGF)",
+  "en": "Copy from chat (TGF)",
+  "zh": "从聊天复制（TGF）"
+ },
+ {
+  "ru": "Квартал Звезд",
+  "en": "Court of Stars",
+  "zh": "群星庭院"
+ },
+ {
+  "ru": "Крафт",
+  "en": "Crafted",
+  "zh": "制造"
+ },
+ {
+  "ru": "Крафт (аукцион)",
+  "en": "Crafted (auction house)",
+  "zh": "制造（拍卖行）"
+ },
+ {
+  "ru": "Крит",
+  "en": "Crit",
+  "zh": "暴"
+ },
+ {
+  "ru": "Критический удар",
+  "en": "Critical Strike",
+  "zh": "暴击"
+ },
+ {
+  "ru": "к критическому удару",
+  "en": "Critical Strike",
+  "zh": "暴击"
+ },
+ {
+  "ru": "Рыцарь",
+  "en": "Crusader",
+  "zh": "十字军"
+ },
+ {
+  "ru": "Ctrl+щелчок - запомнить текущую метку для этого источника",
+  "en": "Ctrl-click to remember the current marker for this source",
+  "zh": "Ctrl+点击记住此来源的当前标记"
+ },
+ {
+  "ru": "Танцующая сталь",
+  "en": "Dancing Steel",
+  "zh": "舞钢"
+ },
+ {
+  "ru": "Чаща Темного Сердца",
+  "en": "Darkheart Thicket",
+  "zh": "黑心林地"
+ },
+ {
+  "ru": "Та Сторона",
+  "en": "De Other Side",
+  "zh": "彼界"
+ },
+ {
+  "ru": "Рыцарь смерти",
+  "en": "Death Knight",
+  "zh": "死亡骑士"
+ },
+ {
+  "ru": "Отладка",
+  "en": "Debug",
+  "zh": "调试"
+ },
+ {
+  "ru": "декабря",
+  "en": "December",
+  "zh": "12月"
+ },
+ {
+  "ru": "Охотник на демонов",
+  "en": "Demon Hunter",
+  "zh": "恶魔猎手"
+ },
+ {
+  "ru": "Демонология",
+  "en": "Demonology",
+  "zh": "恶魔学识"
+ },
+ {
+  "ru": "Разрушение",
+  "en": "Destruction",
+  "zh": "毁灭"
+ },
+ {
+  "ru": "Опустошитель",
+  "en": "Devastation",
+  "zh": "湮灭"
+ },
+ {
+  "ru": "Пожиратель",
+  "en": "Devourer",
+  "zh": "吞噬者"
+ },
+ {
+  "ru": "Забытый город – центральный сад",
+  "en": "Dire Maul - Capital Gardens",
+  "zh": "厄运之槌 - 中心花园"
+ },
+ {
+  "ru": "Забытый город – палаты Гордока",
+  "en": "Dire Maul - Gordok Commons",
+  "zh": "厄运之槌 - 戈多克议会"
+ },
+ {
+  "ru": "Забытый город – квартал Криводревов",
+  "en": "Dire Maul - Warpwood Quarter",
+  "zh": "厄运之槌 - 扭木区"
+ },
+ {
+  "ru": "Послушание",
+  "en": "Discipline",
+  "zh": "戒律"
+ },
+ {
+  "ru": "владычества",
+  "en": "domination",
+  "zh": "统御"
+ },
+ {
+  "ru": "владычества гнездо",
+  "en": "domination socket",
+  "zh": "统御插槽"
+ },
+ {
+  "ru": "владычества гнёзда",
+  "en": "domination sockets",
+  "zh": "统御插槽"
+ },
+ {
+  "ru": "Дренор",
+  "en": "Draenor",
+  "zh": "德拉诺"
+ },
+ {
+  "ru": "Дренор (рарники, раз в день)",
+  "en": "Draenor (rares, once a day)",
+  "zh": "德拉诺（稀有怪，每日一次）"
+ },
+ {
+  "ru": "Подземелья Дренора",
+  "en": "Draenor dungeons",
+  "zh": "德拉诺地下城"
+ },
+ {
+  "ru": "Перетаскивание - двигать по краю карты",
+  "en": "Drag to move around the minimap",
+  "zh": "拖动可沿小地图边缘移动"
+ },
+ {
+  "ru": "Драконы",
+  "en": "Dragonflight",
+  "zh": "巨龙时代"
+ },
+ {
+  "ru": "Крепость Драк'Тарон",
+  "en": "Drak'Tharon Keep",
+  "zh": "达克萨隆要塞"
+ },
+ {
+  "ru": "Друид",
+  "en": "Druid",
+  "zh": "德鲁伊"
+ },
+ {
+  "ru": "Подземелье",
+  "en": "Dungeon",
+  "zh": "地下城"
+ },
+ {
+  "ru": "Стихии",
+  "en": "Elemental",
+  "zh": "元素"
+ },
+ {
+  "ru": "Чара: ",
+  "en": "Enchant: ",
+  "zh": "附魔："
+ },
+ {
+  "ru": "Конец Времен",
+  "en": "End Time",
+  "zh": "时光之末"
+ },
+ {
+  "ru": "Инженерия",
+  "en": "Engineering",
+  "zh": "工程学"
+ },
+ {
+  "ru": "Английский",
+  "en": "English",
+  "zh": "英语"
+ },
+ {
+  "ru": "Совершенствование",
+  "en": "Enhancement",
+  "zh": "增强"
+ },
+ {
+  "ru": "Слепок надетого (/tgf ref)",
+  "en": "Equipped snapshot (/tgf ref)",
+  "zh": "当前装备记录（/tgf ref）"
+ },
+ {
+  "ru": "Пробудитель",
+  "en": "Evoker",
+  "zh": "唤魔师"
+ },
+ {
+  "ru": "Выгрузить сборку для SimulationCraft",
+  "en": "Export the build for SimulationCraft",
+  "zh": "导出配装到SimulationCraft"
+ },
+ {
+  "ru": "Око Азшары",
+  "en": "Eye of Azshara",
+  "zh": "艾萨拉之眼"
+ },
+ {
+  "ru": "февраля",
+  "en": "February",
+  "zh": "2月"
+ },
+ {
+  "ru": "Ступни",
+  "en": "Feet",
+  "zh": "脚"
+ },
+ {
+  "ru": "Сила зверя",
+  "en": "Feral",
+  "zh": "野性"
+ },
+ {
+  "ru": "Сила зверя: лучшая из 16 сборок двадцаток гильдии",
+  "en": "Feral: best of 16 guild level-20 builds",
+  "zh": "野性：公会 16 套 20 级配装中最佳"
+ },
+ {
+  "ru": "Палец",
+  "en": "Finger",
+  "zh": "手指"
+ },
+ {
+  "ru": "Огонь",
+  "en": "Fire",
+  "zh": "火焰"
+ },
+ {
+  "ru": "Вольная Гавань",
+  "en": "Freehold",
+  "zh": "自由镇"
+ },
+ {
+  "ru": "Лед",
+  "en": "Frost",
+  "zh": "冰霜"
+ },
+ {
+  "ru": "Лёд",
+  "en": "Frost",
+  "zh": "冰霜"
+ },
+ {
+  "ru": "Лёд: лучшая из сборок двадцаток гильдии",
+  "en": "Frost: best of the guild level-20 builds",
+  "zh": "冰霜：公会 20 级配装中最佳"
+ },
+ {
+  "ru": "Неистовство",
+  "en": "Fury",
+  "zh": "狂怒"
+ },
+ {
+  "ru": "Неистовство: сборка Кавочавоо, 247 заходов в логах рейтинга",
+  "en": "Fury: Кавочавоо's build, 247 runs in the ranking logs",
+  "zh": "狂怒：Кавочавоо 的配装，排行榜中 247 次通关"
+ },
+ {
+  "ru": "Врата Заходящего Солнца",
+  "en": "Gate of the Setting Sun",
+  "zh": "残阳关"
+ },
+ {
+  "ru": "Гномреган",
+  "en": "Gnomeregan",
+  "zh": "诺莫瑞根"
+ },
+ {
+  "ru": "Грим Батол",
+  "en": "Grim Batol",
+  "zh": "格瑞姆巴托"
+ },
+ {
+  "ru": "Депо Мрачных Путей",
+  "en": "Grimrail Depot",
+  "zh": "恐轨车站"
+ },
+ {
+  "ru": "Страж",
+  "en": "Guardian",
+  "zh": "守护"
+ },
+ {
+  "ru": "Страж: лучшая из 14 сборок двадцаток гильдии",
+  "en": "Guardian: best of 14 guild level-20 builds",
+  "zh": "守护：公会 14 套 20 级配装中最佳"
+ },
+ {
+  "ru": "Гундрак",
+  "en": "Gundrak",
+  "zh": "古达克"
+ },
+ {
+  "ru": "Чертоги Покаяния",
+  "en": "Halls of Atonement",
+  "zh": "赎罪大厅"
+ },
+ {
+  "ru": "Чертоги Насыщения",
+  "en": "Halls of Infusion",
+  "zh": "注能大厅"
+ },
+ {
+  "ru": "Чертоги Молний",
+  "en": "Halls of Lightning",
+  "zh": "闪电大厅"
+ },
+ {
+  "ru": "Чертоги Камня",
+  "en": "Halls of Stone",
+  "zh": "岩石大厅"
+ },
+ {
+  "ru": "Чертоги Доблести",
+  "en": "Halls of Valor",
+  "zh": "英灵殿"
+ },
+ {
+  "ru": "Кисти",
+  "en": "Hands",
+  "zh": "手"
+ },
+ {
+  "ru": "Кисти рук",
+  "en": "Hands",
+  "zh": "手"
+ },
+ {
+  "ru": "Скор.",
+  "en": "Haste",
+  "zh": "急"
+ },
+ {
+  "ru": "Скорость",
+  "en": "Haste",
+  "zh": "急速"
+ },
+ {
+  "ru": "к скорости",
+  "en": "Haste",
+  "zh": "急速"
+ },
+ {
+  "ru": "Истребление",
+  "en": "Havoc",
+  "zh": "浩劫"
+ },
+ {
+  "ru": "Голова",
+  "en": "Head",
+  "zh": "头部"
+ },
+ {
+  "ru": "Фамильные вещи",
+  "en": "Heirlooms",
+  "zh": "传家宝"
+ },
+ {
+  "ru": "Цитадель Адского Пламени",
+  "en": "Hellfire Citadel",
+  "zh": "地狱火堡垒"
+ },
+ {
+  "ru": "Свет",
+  "en": "Holy",
+  "zh": "神圣"
+ },
+ {
+  "ru": "Орда",
+  "en": "Horde",
+  "zh": "部落"
+ },
+ {
+  "ru": "Охотник",
+  "en": "Hunter",
+  "zh": "猎人"
+ },
+ {
+  "ru": "Инт.",
+  "en": "Int",
+  "zh": "智"
+ },
+ {
+  "ru": "Интеллект",
+  "en": "Intellect",
+  "zh": "智力"
+ },
+ {
+  "ru": "к интеллекту",
+  "en": "Intellect",
+  "zh": "智力"
+ },
+ {
+  "ru": "Железные доки",
+  "en": "Iron Docks",
+  "zh": "钢铁码头"
+ },
+ {
+  "ru": "Предмет",
+  "en": "Item",
+  "zh": "物品"
+ },
+ {
+  "ru": "к уровню предмета",
+  "en": "item level",
+  "zh": "装等"
+ },
+ {
+  "ru": "января",
+  "en": "January",
+  "zh": "1月"
+ },
+ {
+  "ru": "июля",
+  "en": "July",
+  "zh": "7月"
+ },
+ {
+  "ru": "июня",
+  "en": "June",
+  "zh": "6月"
+ },
+ {
+  "ru": "Гробница королей",
+  "en": "Kings' Rest",
+  "zh": "诸王之眠"
+ },
+ {
+  "ru": "Кул-Тирас (рарники, раз на персонажа)",
+  "en": "Kul Tiras (rares, once per character)",
+  "zh": "库尔提拉斯（稀有怪，每角色一次）"
+ },
+ {
+  "ru": "Язык",
+  "en": "Language",
+  "zh": "语言"
+ },
+ {
+  "ru": "Кожа",
+  "en": "Leather",
+  "zh": "皮甲"
+ },
+ {
+  "ru": "Легион",
+  "en": "Legion",
+  "zh": "军团再临"
+ },
+ {
+  "ru": "Ноги",
+  "en": "Legs",
+  "zh": "腿部"
+ },
+ {
+  "ru": "Затерянный город Тол'вир",
+  "en": "Lost City of the Tol'vir",
+  "zh": "托维尔失落之城"
+ },
+ {
+  "ru": "Маг",
+  "en": "Mage",
+  "zh": "法师"
+ },
+ {
+  "ru": "Терраса Магистров",
+  "en": "Magisters' Terrace",
+  "zh": "魔导师平台"
+ },
+ {
+  "ru": "Кольчуга",
+  "en": "Mail",
+  "zh": "锁甲"
+ },
+ {
+  "ru": "Правая рука",
+  "en": "Main Hand",
+  "zh": "主手"
+ },
+ {
+  "ru": "Гробницы маны",
+  "en": "Mana-Tombs",
+  "zh": "法力陵墓"
+ },
+ {
+  "ru": "метка на карте",
+  "en": "map pin",
+  "zh": "地图标记"
+ },
+ {
+  "ru": "Мародон",
+  "en": "Maraudon",
+  "zh": "玛拉顿"
+ },
+ {
+  "ru": "марта",
+  "en": "March",
+  "zh": "3月"
+ },
+ {
+  "ru": "Знак когтя",
+  "en": "Mark of the Claw",
+  "zh": "爪之印记"
+ },
+ {
+  "ru": "Знак незримого сатира",
+  "en": "Mark of the Hidden Satyr",
+  "zh": "隐形萨特印记"
+ },
+ {
+  "ru": "Знак подготовленного солдата",
+  "en": "Mark of the Trained Soldier",
+  "zh": "备战士兵印记"
+ },
+ {
+  "ru": "Отметить: рарник убит, нужная вещь не выпала",
+  "en": "Mark: rare killed, the item did not drop",
+  "zh": "标记：稀有怪已击杀，所需物品未掉落"
+ },
+ {
+  "ru": "Стрельба",
+  "en": "Marksmanship",
+  "zh": "射击"
+ },
+ {
+  "ru": "Иск.",
+  "en": "Mast",
+  "zh": "精"
+ },
+ {
+  "ru": "Искусность",
+  "en": "Mastery",
+  "zh": "精通"
+ },
+ {
+  "ru": "к искусности",
+  "en": "Mastery",
+  "zh": "精通"
+ },
+ {
+  "ru": "мая",
+  "en": "May",
+  "zh": "5月"
+ },
+ {
+  "ru": "особое",
+  "en": "meta",
+  "zh": "多彩"
+ },
+ {
+  "ru": "особое гнездо",
+  "en": "meta socket",
+  "zh": "多彩插槽"
+ },
+ {
+  "ru": "особое гнёзда",
+  "en": "meta sockets",
+  "zh": "多彩插槽"
+ },
+ {
+  "ru": "Мин-Макс",
+  "en": "Min-Max",
+  "zh": "缩放"
+ },
+ {
+  "ru": "Ткач туманов",
+  "en": "Mistweaver",
+  "zh": "织雾"
+ },
+ {
+  "ru": "Дворец Могу'шан",
+  "en": "Mogu'shan Palace",
+  "zh": "魔古山宫殿"
+ },
+ {
+  "ru": "Монах",
+  "en": "Monk",
+  "zh": "武僧"
+ },
+ {
+  "ru": "Награнд",
+  "en": "Nagrand",
+  "zh": "纳格兰"
+ },
+ {
+  "ru": "Шея",
+  "en": "Neck",
+  "zh": "颈部"
+ },
+ {
+  "ru": "Логово Нелтариона",
+  "en": "Neltharion's Lair",
+  "zh": "奈萨里奥的巢穴"
+ },
+ {
+  "ru": "Нелтарий",
+  "en": "Neltharus",
+  "zh": "奈萨鲁斯"
+ },
+ {
+  "ru": "Нет чар",
+  "en": "No enchant",
+  "zh": "无附魔"
+ },
+ {
+  "ru": "Для этого спека кода пока нет.",
+  "en": "No loadout for this spec yet.",
+  "zh": "此专精暂无代码。"
+ },
+ {
+  "ru": "Сейчас нет Путешествия во времени",
+  "en": "No Timewalking event is active",
+  "zh": "当前没有时空漫游活动"
+ },
+ {
+  "ru": "В календаре пока нет ближайшего Путешествия во времени",
+  "en": "No upcoming Timewalking event on the calendar yet",
+  "zh": "日历上还没有即将到来的时空漫游"
+ },
+ {
+  "ru": "ноября",
+  "en": "November",
+  "zh": "11月"
+ },
+ {
+  "ru": "Цифры",
+  "en": "Numbers",
+  "zh": "数字"
+ },
+ {
+  "ru": "октября",
+  "en": "October",
+  "zh": "10月"
+ },
+ {
+  "ru": "выключены",
+  "en": "off",
+  "zh": "已关闭"
+ },
+ {
+  "ru": "Левая рука",
+  "en": "Off Hand",
+  "zh": "副手"
+ },
+ {
+  "ru": "Равнины Он'ары",
+  "en": "Ohn'ahran Plains",
+  "zh": "欧恩哈拉平原"
+ },
+ {
+  "ru": "Старые предгорья Хилсбрада",
+  "en": "Old Hillsbrad Foothills",
+  "zh": "旧希尔斯布莱德丘陵"
+ },
+ {
+  "ru": "включены",
+  "en": "on",
+  "zh": "已开启"
+ },
+ {
+  "ru": "Одноручное",
+  "en": "One-Hand",
+  "zh": "单手"
+ },
+ {
+  "ru": "Открыть сборки",
+  "en": "Open builds",
+  "zh": "打开配装"
+ },
+ {
+  "ru": "Головорез",
+  "en": "Outlaw",
+  "zh": "狂徒"
+ },
+ {
+  "ru": "Паладин",
+  "en": "Paladin",
+  "zh": "圣骑士"
+ },
+ {
+  "ru": "Пандария",
+  "en": "Pandaria",
+  "zh": "潘达利亚"
+ },
+ {
+  "ru": "Вставляется в игре: окно талантов — Загрузить сборку.",
+  "en": "Paste in-game: talent window — Load Loadout.",
+  "zh": "在游戏中粘贴：天赋窗口——加载配装。"
+ },
+ {
+  "ru": "Яма Сарона",
+  "en": "Pit of Saron",
+  "zh": "萨隆矿坑"
+ },
+ {
+  "ru": "Чумные каскады",
+  "en": "Plaguefall",
+  "zh": "凋魂之殇"
+ },
+ {
+  "ru": "Латы",
+  "en": "Plate",
+  "zh": "板甲"
+ },
+ {
+  "ru": "Настоящее",
+  "en": "Present",
+  "zh": "现在"
+ },
+ {
+  "ru": "Хранитель",
+  "en": "Preservation",
+  "zh": "恩护"
+ },
+ {
+  "ru": "Жрец",
+  "en": "Priest",
+  "zh": "牧师"
+ },
+ {
+  "ru": "бесцветное",
+  "en": "prismatic",
+  "zh": "棱彩"
+ },
+ {
+  "ru": "бесцветное гнездо",
+  "en": "prismatic socket",
+  "zh": "棱彩插槽"
+ },
+ {
+  "ru": "бесцветное гнёзда",
+  "en": "prismatic sockets",
+  "zh": "棱彩插槽"
+ },
+ {
+  "ru": "Прок; в счёт идёт средний вклад за бой.",
+  "en": "Proc; counted as its average contribution over the fight.",
+  "zh": "触发；按战斗中平均贡献计算。"
+ },
+ {
+  "ru": "Защита",
+  "en": "Protection",
+  "zh": "防护"
+ },
+ {
+  "ru": "Защита: сборка Кавочавоо",
+  "en": "Protection: Кавочавоо's build",
+  "zh": "防护：Кавочавоо 的配装"
+ },
+ {
+  "ru": "Квест",
+  "en": "Quest",
+  "zh": "任务"
+ },
+ {
+  "ru": "Задание «Битва за Расколотый берег» — только Альянс",
+  "en": "Quest 'Battle for the Broken Shore' - Alliance only",
+  "zh": "任务“破碎海滩之战” - 仅限联盟"
+ },
+ {
+  "ru": "Дальнобойное",
+  "en": "Ranged",
+  "zh": "远程"
+ },
+ {
+  "ru": "Рарник убит, нужная вещь не выпала",
+  "en": "Rare killed, the item did not drop",
+  "zh": "稀有怪已击杀，所需物品未掉落"
+ },
+ {
+  "ru": "Рарники",
+  "en": "Rare mobs",
+  "zh": "稀有怪"
+ },
+ {
+  "ru": "красное",
+  "en": "red",
+  "zh": "红色"
+ },
+ {
+  "ru": "красное гнездо",
+  "en": "red socket",
+  "zh": "红色插槽"
+ },
+ {
+  "ru": "красное гнёзда",
+  "en": "red sockets",
+  "zh": "红色插槽"
+ },
+ {
+  "ru": "Исцеление",
+  "en": "Restoration",
+  "zh": "恢复"
+ },
+ {
+  "ru": "Воздаяние",
+  "en": "Retribution",
+  "zh": "惩戒"
+ },
+ {
+  "ru": "Кольцо 1",
+  "en": "Ring 1",
+  "zh": "戒指 1"
+ },
+ {
+  "ru": "Кольцо 2",
+  "en": "Ring 2",
+  "zh": "戒指 2"
+ },
+ {
+  "ru": "Разбойник",
+  "en": "Rogue",
+  "zh": "潜行者"
+ },
+ {
+  "ru": "Рубиновые Омуты Жизни",
+  "en": "Ruby Life Pools",
+  "zh": "红玉新生法池"
+ },
+ {
+  "ru": "прогон",
+  "en": "run",
+  "zh": "运行"
+ },
+ {
+  "ru": "Руна режущего льда",
+  "en": "Rune of Razorice",
+  "zh": "冰刃符文"
+ },
+ {
+  "ru": "Руна павшего рыцаря",
+  "en": "Rune of the Fallen Crusader",
+  "zh": "堕落骑士符文"
+ },
+ {
+  "ru": "Руна каменной горгульи",
+  "en": "Rune of the Stoneskin Gargoyle",
+  "zh": "石像鬼符文"
+ },
+ {
+  "ru": "Русский",
+  "en": "Russian",
+  "zh": "俄语"
+ },
+ {
+  "ru": "Как в игре",
+  "en": "Same as game client",
+  "zh": "跟随游戏"
+ },
+ {
+  "ru": "Кровавые катакомбы",
+  "en": "Sanguine Depths",
+  "zh": "赤红深渊"
+ },
+ {
+  "ru": "Сверить (/tgf scan)",
+  "en": "Scan (/tgf scan)",
+  "zh": "核对（/tgf scan）"
+ },
+ {
+  "ru": "Залы Алого ордена",
+  "en": "Scarlet Halls",
+  "zh": "血色大厅"
+ },
+ {
+  "ru": "Некроситет",
+  "en": "Scholomance",
+  "zh": "通灵学院"
+ },
+ {
+  "ru": "Прицел (+2 к урону)",
+  "en": "Scope (+2 Damage)",
+  "zh": "瞄准镜 (+2 伤害)"
+ },
+ {
+  "ru": "Поиск",
+  "en": "Search",
+  "zh": "搜索"
+ },
+ {
+  "ru": "Выделить всё",
+  "en": "Select all",
+  "zh": "全选"
+ },
+ {
+  "ru": "сентября",
+  "en": "September",
+  "zh": "9月"
+ },
+ {
+  "ru": "Сетеккские залы",
+  "en": "Sethekk Halls",
+  "zh": "塞泰克大厅"
+ },
+ {
+  "ru": "Монастырь Шадо-Пан",
+  "en": "Shado-Pan Monastery",
+  "zh": "影踪禅院"
+ },
+ {
+  "ru": "Тьма",
+  "en": "Shadow",
+  "zh": "暗影"
+ },
+ {
+  "ru": "Темный лабиринт",
+  "en": "Shadow Labyrinth",
+  "zh": "暗影迷宫"
+ },
+ {
+  "ru": "Затененная поясная застежка",
+  "en": "Shadowed Belt Clasp",
+  "zh": "暗影腰带扣"
+ },
+ {
+  "ru": "Крепость Темного Клыка",
+  "en": "Shadowfang Keep",
+  "zh": "影牙城堡"
+ },
+ {
+  "ru": "Темные земли",
+  "en": "Shadowlands",
+  "zh": "暗影国度"
+ },
+ {
+  "ru": "Некрополь Призрачной Луны",
+  "en": "Shadowmoon Burial Grounds",
+  "zh": "影月墓地"
+ },
+ {
+  "ru": "Долина Призрачной Луны",
+  "en": "Shadowmoon Valley",
+  "zh": "影月谷"
+ },
+ {
+  "ru": "Шаман",
+  "en": "Shaman",
+  "zh": "萨满祭司"
+ },
+ {
+  "ru": "Щит",
+  "en": "Shield",
+  "zh": "盾牌"
+ },
+ {
+  "ru": "Низина Шолазар",
+  "en": "Sholazar Basin",
+  "zh": "索拉查盆地"
+ },
+ {
+  "ru": "Плечи",
+  "en": "Shoulder",
+  "zh": "肩部"
+ },
+ {
+  "ru": "Показать: весь чат",
+  "en": "Show: all chat",
+  "zh": "显示：全部聊天"
+ },
+ {
+  "ru": "Показать: только код",
+  "en": "Show: code only",
+  "zh": "显示：仅代码"
+ },
+ {
+  "ru": "Показать: только TGF",
+  "en": "Show: TGF only",
+  "zh": "显示：仅TGF"
+ },
+ {
+  "ru": "Святилище Штормов",
+  "en": "Shrine of the Storm",
+  "zh": "风暴神殿"
+ },
+ {
+  "ru": "Небесный Путь",
+  "en": "Skyreach",
+  "zh": "通天峰"
+ },
+ {
+  "ru": "Слот",
+  "en": "Slot",
+  "zh": "部位"
+ },
+ {
+  "ru": "гнездо",
+  "en": "socket",
+  "zh": "插槽"
+ },
+ {
+  "ru": "гнёзда",
+  "en": "sockets",
+  "zh": "插槽"
+ },
+ {
+  "ru": "Источник",
+  "en": "Source",
+  "zh": "来源"
+ },
+ {
+  "ru": "Источник: ",
+  "en": "Source: ",
+  "zh": "来源："
+ },
+ {
+  "ru": "Шпили Перерождения",
+  "en": "Spires of Ascension",
+  "zh": "晋升高塔"
+ },
+ {
+  "ru": "Вын.",
+  "en": "Sta",
+  "zh": "耐"
+ },
+ {
+  "ru": "Выносливость",
+  "en": "Stamina",
+  "zh": "耐力"
+ },
+ {
+  "ru": "к выносливости",
+  "en": "Stamina",
+  "zh": "耐力"
+ },
+ {
+  "ru": "Статы (наш замер): ",
+  "en": "Stats (our sim): ",
+  "zh": "属性（我们的模拟）："
+ },
+ {
+  "ru": "Статы: ",
+  "en": "Stats: ",
+  "zh": "属性："
+ },
+ {
+  "ru": "Хмелеварня Буйных Портеров",
+  "en": "Stormstout Brewery",
+  "zh": "风暴烈酒酿造厂"
+ },
+ {
+  "ru": "Стратхольм",
+  "en": "Stratholme",
+  "zh": "斯坦索姆"
+ },
+ {
+  "ru": "Стратхольм – главные врата",
+  "en": "Stratholme - Main Gate",
+  "zh": "斯坦索姆 - 正门"
+ },
+ {
+  "ru": "Стратхольм - Чёрный ход",
+  "en": "Stratholme - Service Entrance",
+  "zh": "斯坦索姆 - 后门"
+ },
+ {
+  "ru": "Стратхольм – черный ход",
+  "en": "Stratholme - Service Entrance",
+  "zh": "斯坦索姆 - 后门"
+ },
+ {
+  "ru": "Сила",
+  "en": "Strength",
+  "zh": "力量"
+ },
+ {
+  "ru": "к силе",
+  "en": "Strength",
+  "zh": "力量"
+ },
+ {
+  "ru": "Скрытность",
+  "en": "Subtlety",
+  "zh": "敏锐"
+ },
+ {
+  "ru": "Выживание",
+  "en": "Survival",
+  "zh": "生存"
+ },
+ {
+  "ru": "Код талантов",
+  "en": "Talent loadout",
+  "zh": "天赋代码"
+ },
+ {
+  "ru": "Таланты",
+  "en": "Talents",
+  "zh": "天赋"
+ },
+ {
+  "ru": "Танаанские джунгли",
+  "en": "Tanaan Jungle",
+  "zh": "塔纳安丛林"
+ },
+ {
+  "ru": "Храм Сетралисс",
+  "en": "Temple of Sethraliss",
+  "zh": "塞塔里斯神庙"
+ },
+ {
+  "ru": "Храм Нефритовой Змеи",
+  "en": "Temple of the Jade Serpent",
+  "zh": "青龙寺"
+ },
+ {
+  "ru": "Лазурный Простор",
+  "en": "The Azure Span",
+  "zh": "碧蓝林海"
+ },
+ {
+  "ru": "Лазурное хранилище",
+  "en": "The Azure Vault",
+  "zh": "碧蓝魔馆"
+ },
+ {
+  "ru": "Лазурные Врата",
+  "en": "The Azure Vault",
+  "zh": "碧蓝魔馆"
+ },
+ {
+  "ru": "Кузня Крови",
+  "en": "The Blood Furnace",
+  "zh": "鲜血熔炉"
+ },
+ {
+  "ru": "Ботаника",
+  "en": "The Botanica",
+  "zh": "生态船"
+ },
+ {
+  "ru": "Очищение Стратхольма",
+  "en": "The Culling of Stratholme",
+  "zh": "净化斯坦索姆"
+ },
+ {
+  "ru": "Мертвые копи",
+  "en": "The Deadmines",
+  "zh": "死亡矿井"
+ },
+ {
+  "ru": "Вечное Цветение",
+  "en": "The Everbloom",
+  "zh": "永茂林地"
+ },
+ {
+  "ru": "Кузня Душ",
+  "en": "The Forge of Souls",
+  "zh": "灵魂熔炉"
+ },
+ {
+  "ru": "На дневном сбросе кружок опустеет - можно прийти снова.",
+  "en": "The mark clears at daily reset — you can come back.",
+  "zh": "每日重置后标记清除——可以再来。"
+ },
+ {
+  "ru": "Механар",
+  "en": "The Mechanar",
+  "zh": "能源舰"
+ },
+ {
+  "ru": "ЗОЛОТАЯ ЖИЛА!!!",
+  "en": "The MOTHERLODE!!",
+  "zh": "暴富矿区！！"
+ },
+ {
+  "ru": "Смертельная тризна",
+  "en": "The Necrotic Wake",
+  "zh": "凋骨之殇"
+ },
+ {
+  "ru": "Нексус",
+  "en": "The Nexus",
+  "zh": "魔枢"
+ },
+ {
+  "ru": "Наступление Нохуда",
+  "en": "The Nokhud Offensive",
+  "zh": "诺库德阻击战"
+ },
+ {
+  "ru": "Окулус",
+  "en": "The Oculus",
+  "zh": "魔环"
+ },
+ {
+  "ru": "Разрушенные залы",
+  "en": "The Shattered Halls",
+  "zh": "破碎大厅"
+ },
+ {
+  "ru": "Узилище",
+  "en": "The Slave Pens",
+  "zh": "奴隶围栏"
+ },
+ {
+  "ru": "Паровое подземелье",
+  "en": "The Steamvault",
+  "zh": "蒸汽地窟"
+ },
+ {
+  "ru": "Каменные Недра",
+  "en": "The Stonecore",
+  "zh": "巨石之核"
+ },
+ {
+  "ru": "Нижетопь",
+  "en": "The Underbog",
+  "zh": "幽暗沼泽"
+ },
+ {
+  "ru": "Аметистовая крепость",
+  "en": "The Violet Hold",
+  "zh": "紫罗兰监狱"
+ },
+ {
+  "ru": "Вершина Смерча",
+  "en": "The Vortex Pinnacle",
+  "zh": "漩涡尖塔"
+ },
+ {
+  "ru": "Берега Пробуждения",
+  "en": "The Waking Shores",
+  "zh": "觉醒海岸"
+ },
+ {
+  "ru": "Театр Боли",
+  "en": "Theater of Pain",
+  "zh": "苦痛剧场"
+ },
+ {
+  "ru": "Трон Приливов",
+  "en": "Throne of the Tides",
+  "zh": "潮汐王座"
+ },
+ {
+  "ru": "Ранг",
+  "en": "Tier",
+  "zh": "评级"
+ },
+ {
+  "ru": "Значок Путешествия во времени на плитках",
+  "en": "Timewalking badge on dungeon tiles",
+  "zh": "地下城格子上的时空漫游标记"
+ },
+ {
+  "ru": "Данжи Путешествия во времени на текущем сезоне",
+  "en": "Timewalking dungeons on the current season tab",
+  "zh": "当前赛季标签页上的时空漫游地下城"
+ },
+ {
+  "ru": "Путешествие во времени из журнала — не гайд главы гильдии.",
+  "en": "Timewalking from the journal — not the guild guide.",
+  "zh": "时空漫游数据来自冒险指南，非公会攻略"
+ },
+ {
+  "ru": "Путешествие во времени: Катаклизм",
+  "en": "Timewalking: Cataclysm",
+  "zh": "时空漫游：大灾变"
+ },
+ {
+  "ru": "Путешествие во времени: Нордскол",
+  "en": "Timewalking: Northrend",
+  "zh": "时空漫游：诺森德"
+ },
+ {
+  "ru": "Путешествие во времени: Пандария",
+  "en": "Timewalking: Pandaria",
+  "zh": "时空漫游：潘达利亚"
+ },
+ {
+  "ru": "уточнить",
+  "en": "to be confirmed",
+  "zh": "待确认"
+ },
+ {
+  "ru": "ПОИСК ШМОТА ДЛЯ ТРИАЛА",
+  "en": "TRIAL GEAR FINDER",
+  "zh": "试玩装备查找器"
+ },
+ {
+  "ru": "Аксессуар",
+  "en": "Trinket",
+  "zh": "饰品"
+ },
+ {
+  "ru": "Аксессуар 1",
+  "en": "Trinket 1",
+  "zh": "饰品 1"
+ },
+ {
+  "ru": "Аксессуар 2",
+  "en": "Trinket 2",
+  "zh": "饰品 2"
+ },
+ {
+  "ru": "Ранг аксессуара для спека: S лучший, дальше A, B, C",
+  "en": "Trinket tier for the spec: S is best, then A, B, C",
+  "zh": "该专精的饰品评级：S 最佳，其次为 A、B、C"
+ },
+ {
+  "ru": "Двуручное",
+  "en": "Two-Hand",
+  "zh": "双手"
+ },
+ {
+  "ru": "Ульдаман",
+  "en": "Uldaman",
+  "zh": "奥达曼"
+ },
+ {
+  "ru": "Ульдаман: наследие Тира",
+  "en": "Uldaman: Legacy of Tyr",
+  "zh": "奥达曼：提尔的遗产"
+ },
+ {
+  "ru": "Нечестивость",
+  "en": "Unholy",
+  "zh": "邪恶"
+ },
+ {
+  "ru": "Нечестивость: лучшая из сборок двадцаток гильдии",
+  "en": "Unholy: best of the guild level-20 builds",
+  "zh": "邪恶：公会 20 级配装中最佳"
+ },
+ {
+  "ru": "Верхняя часть пика Черной горы",
+  "en": "Upper Blackrock Spire",
+  "zh": "黑石塔上层"
+ },
+ {
+  "ru": "Крепость Утгард",
+  "en": "Utgarde Keep",
+  "zh": "乌特加德城堡"
+ },
+ {
+  "ru": "Казематы Стражей",
+  "en": "Vault of the Wardens",
+  "zh": "守望者地窟"
+ },
+ {
+  "ru": "Месть",
+  "en": "Vengeance",
+  "zh": "复仇"
+ },
+ {
+  "ru": "Унив.",
+  "en": "Vers",
+  "zh": "全"
+ },
+ {
+  "ru": "Универсальность",
+  "en": "Versatility",
+  "zh": "全能"
+ },
+ {
+  "ru": "к универсальности",
+  "en": "Versatility",
+  "zh": "全能"
+ },
+ {
+  "ru": "Пояс",
+  "en": "Waist",
+  "zh": "腰部"
+ },
+ {
+  "ru": "Пробужденные характеристики",
+  "en": "Waking Stats",
+  "zh": "觉醒属性"
+ },
+ {
+  "ru": "Чернокнижник",
+  "en": "Warlock",
+  "zh": "术士"
+ },
+ {
+  "ru": "Воин",
+  "en": "Warrior",
+  "zh": "战士"
+ },
+ {
+  "ru": "Усадьба Уэйкрестов",
+  "en": "Waycrest Manor",
+  "zh": "维克雷斯庄园"
+ },
+ {
+  "ru": "Танцующий с ветром",
+  "en": "Windwalker",
+  "zh": "踏风"
+ },
+ {
+  "ru": "Гнев Короля-лича",
+  "en": "Wrath of the Lich King",
+  "zh": "巫妖王之怒"
+ },
+ {
+  "ru": "Запястья",
+  "en": "Wrist",
+  "zh": "手腕"
+ },
+ {
+  "ru": "жёлтое",
+  "en": "yellow",
+  "zh": "黄色"
+ },
+ {
+  "ru": "жёлтое гнездо",
+  "en": "yellow socket",
+  "zh": "黄色插槽"
+ },
+ {
+  "ru": "жёлтое гнёзда",
+  "en": "yellow sockets",
+  "zh": "黄色插槽"
+ },
+ {
+  "ru": "Твоя копия отличается от базы:",
+  "en": "Your copy differs from the database:",
+  "zh": "你的同款装备与数据库不同："
+ },
+ {
+  "ru": "Зандалар (рарники, раз на персонажа)",
+  "en": "Zandalar (rares, once per character)",
+  "zh": "赞达拉（稀有怪，每角色一次）"
+ },
+ {
+  "ru": "Зул'Драк — задание «Чемпион Амфитеатра Страданий»",
+  "en": "Zul'Drak - quest 'Champion of the Amphitheater'",
+  "zh": "祖达克 - 任务“痛苦斗兽场冠军”"
+ },
+ {
+  "ru": "Зул'Фаррак",
+  "en": "Zul'Farrak",
+  "zh": "祖尔法拉克"
+ }
+]

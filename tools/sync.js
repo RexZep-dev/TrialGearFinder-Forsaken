@@ -6,15 +6,18 @@
 // Экипировку не сохраняем. Формат базы - как у ForsakenIO (sync-db.ps1),
 // плюс classFile и specID: по ним игра покажет имя класса и спека на языке
 // клиента, а не русским с сайта.
-//   node tools/sync.js            (у себя: ядро берётся из папки AddOns)
-//   TGF_CORE=<папка ядра> node tools/sync.js   (GitHub: ядро выкачано рядом)
-// Названия подземелий - из переводов ядра (Locales/enUS.lua, zhCN.lua):
-// в снимок кладутся на трёх языках, модуль от ядра не зависит.
+//   node tools/sync.js
+// Названия подземелий на трёх языках - tools/names.json рядом (снят с
+// переводов ядра 3 октября). Сайт пишет английское название; нет его в
+// файле - скрипт скажет «подземелье без перевода», тогда дописать строку
+// { ru, en, zh } в names.json (названия - Wowhead, тултип зоны ru / en / cn).
+// Ядро для этого не нужно: раньше бралось из опубликованного ядра на GitHub,
+// и подземелья, ещё не выложенные в ядре, уехали в снимок по-английски.
 const fs = require("fs");
 const path = require("path");
 const BASE = "https://forsaken-dungeons.online";
 const OUT = path.join(__dirname, "..", "db", "Database.lua");
-const CORE = process.env.TGF_CORE || "G:/World of Warcraft/_retail_/Interface/AddOns/TrialGearFinder";
+
 const CLASS = { "Воин": "WARRIOR", "Паладин": "PALADIN", "Охотник": "HUNTER", "Разбойник": "ROGUE", "Жрец": "PRIEST",
     "Рыцарь смерти": "DEATHKNIGHT", "Шаман": "SHAMAN", "Маг": "MAGE", "Чернокнижник": "WARLOCK", "Монах": "MONK",
     "Друид": "DRUID", "Охотник на демонов": "DEMONHUNTER", "Эвокер": "EVOKER", "Пробудитель": "EVOKER" };
@@ -54,11 +57,11 @@ const rankColor = (index, rows) => {
 // (D["русское"] = "английское" в Locales/enUS.lua): аддон покажет его на
 // языке клиента через ns.D.
 const EN2RU = new Map();
-for (const m of fs.readFileSync(path.join(CORE, "Locales", "enUS.lua"), "utf8").matchAll(/^D\["([^"]+)"\] = "([^"]+)"/gm))
-    if (!EN2RU.has(m[2].toLowerCase())) EN2RU.set(m[2].toLowerCase(), m[1]);
 const RU2ZH = new Map();
-for (const m of fs.readFileSync(path.join(CORE, "Locales", "zhCN.lua"), "utf8").matchAll(/^D\["([^"]+)"\] = "([^"]+)"/gm))
-    if (!RU2ZH.has(m[1])) RU2ZH.set(m[1], m[2]);
+for (const r of JSON.parse(fs.readFileSync(path.join(__dirname, "names.json"), "utf8"))) {
+    if (!EN2RU.has(r.en.toLowerCase())) EN2RU.set(r.en.toLowerCase(), r.ru);
+    if (r.zh && !RU2ZH.has(r.ru)) RU2ZH.set(r.ru, r.zh);
+}
 const key = s => (s || "").toLowerCase().replace(/[\s'\-]+/g, "");
 const q = s => JSON.stringify(s == null ? "" : String(s));
 const get = async p => { const r = await fetch(BASE + p); if (!r.ok) throw new Error(p + " " + r.status); return r.json(); };
