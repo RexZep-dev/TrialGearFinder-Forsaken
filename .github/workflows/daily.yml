@@ -65,7 +65,8 @@ jobs:
           git commit -m "Снимок рейтинга ${VERSION}"
           # Метка - просто дата (пользователь 3 октября: «назовём просто датой»):
           # из неё же подпись файла на CurseForge.
-          git tag "${VERSION}"
+          # С описанием (-a): --follow-tags отправляет только такие метки.
+          git tag -a "${VERSION}" -m "Снимок рейтинга ${VERSION}"
           git push origin HEAD --follow-tags
           echo "Версия ${VERSION}"
 
