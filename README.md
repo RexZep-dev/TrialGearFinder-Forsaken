@@ -1,6 +1,6 @@
 # Trial Gear Finder: Forsaken Dungeons+
 
-Модуль аддона Trial Gear Finder:
+Модуль аддона [Trial Gear Finder](https://www.curseforge.com/wow/addons/trial-gear-finder):
 рейтинг сайта [Forsaken Dungeons+](https://forsaken-dungeons.online) в подсказке
 игрока и в списке гильдии — место, рейтинг, рейды, лучшее подземелье и рейтинг
 по уровням ключа (+20 … +45). Бывший аддон ForsakenIO.

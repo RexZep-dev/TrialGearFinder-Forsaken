@@ -14,3 +14,7 @@ ignore:
   - tools
   - core
   - README.md
+
+# Ядро ставится вместе с модулем: связь «обязательная зависимость» на CurseForge.
+required-dependencies:
+  - trial-gear-finder
