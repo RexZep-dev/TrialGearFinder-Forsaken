@@ -1,24 +1,25 @@
-# Снимок рейтинга Forsaken Dungeons+ каждый день: скрипт берёт данные сайта,
-# и если рейтинг изменился - новая версия уходит на CurseForge сама.
-# Изменилась только дата снимка - ничего не выпускаем.
-# Запуск руками - вкладка Actions, «Run workflow»; галочка «Выпустить сейчас» -
-# выпуск, даже если рейтинг не менялся (для правок кода). Подробно - RELEASING.md.
+# Выпуск модуля Forsaken Dungeons+ на CurseForge - сам, без кнопок.
+# Запускается каждую ночь и при каждой заливке в master. Скрипт берёт свежий
+# рейтинг с сайта, и версия выходит, только если у игрока что-то поменяется:
+# рейтинг или файлы модуля - по сравнению с прошлым выпуском. Не поменялось
+# ничего (дата снимка и номер версии не в счёт) - ничего не выходит
+# (пользователь 3 октября: «если изменений нет вообще - пусть не заливается»).
+# Подробно - RELEASING.md.
 
 name: Daily snapshot
 
 on:
   schedule:
     - cron: "0 3 * * *"   # 06:00 по Москве
-  workflow_dispatch:
-    inputs:
-      force:
-        description: "Выпустить сейчас, даже если рейтинг не менялся (для правок кода)"
-        type: boolean
-        default: false
   push:
-    tags:
-      - "v*"
-      - "20*"
+    branches:
+      - master
+  workflow_dispatch:
+
+# Ночной запуск и заливка подряд идут по очереди, не вместе.
+concurrency:
+  group: release
+  cancel-in-progress: false
 
 jobs:
   release:
@@ -27,33 +28,38 @@ jobs:
       contents: write
 
     steps:
+      # ref: master - последнее состояние на момент старта: запуск, ждавший
+      # в очереди, не затрёт чужой свежий выпуск.
       - uses: actions/checkout@v4
         with:
+          ref: master
           fetch-depth: 0
 
       - uses: actions/setup-node@v4
-        if: github.event_name != 'push'
         with:
           node-version: "22"
 
-      - name: Обновить снимок
-        if: github.event_name != 'push'
+      - name: Обновить снимок и сравнить с прошлым выпуском
         id: sync
         run: |
           node tools/sync.js
-          # Дата снимка меняется всегда; выпускаем, только если поменялось остальное.
-          if [ "${{ github.event.inputs.force }}" = "true" ]; then
-            echo "Выпуск по кнопке «Выпустить сейчас»."
+          # Что получает игрок - эти файлы. Дата снимка и номер версии не в счёт.
+          FILES="TrialGearFinder_Forsaken.toc Locales.lua Forsaken.lua db/Database.lua"
+          LAST="$(git describe --tags --abbrev=0 2>/dev/null || true)"
+          if [ -z "$LAST" ]; then
+            echo "Выпусков ещё не было - выпускаем."
             echo "changed=true" >> "$GITHUB_OUTPUT"
-          elif git diff --quiet -I'generatedAt' -- db/Database.lua; then
-            echo "Рейтинг не изменился - выпуска нет."
+          elif git diff --quiet -I'generatedAt' -I'^## Version:' "$LAST" -- $FILES; then
+            echo "С выпуска $LAST у игрока ничего не поменялось - выпуска нет."
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
+            echo "Поменялось с выпуска $LAST:"
+            git diff --stat -I'generatedAt' -I'^## Version:' "$LAST" -- $FILES
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Версия по дате, коммит и метка
-        if: github.event_name != 'push' && steps.sync.outputs.changed == 'true'
+        if: steps.sync.outputs.changed == 'true'
         run: |
           VERSION="$(date -u +%Y.%m.%d)"
           N=1
@@ -64,18 +70,17 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add db/Database.lua TrialGearFinder_Forsaken.toc
-          git commit --allow-empty -m "Снимок рейтинга ${VERSION}"
-          # Метка - просто дата (пользователь 3 октября: «назовём просто датой»):
-          # из неё же подпись файла на CurseForge.
-          # С описанием (-a): --follow-tags отправляет только такие метки.
-          git tag -a "${VERSION}" -m "Снимок рейтинга ${VERSION}"
-          git push origin HEAD --follow-tags
+          git commit --allow-empty -m "Выпуск ${VERSION}"
+          # Метка - просто дата (пользователь 3 октября: «назовём просто датой»),
+          # из неё же подпись файла на CurseForge. С описанием (-a):
+          # --follow-tags отправляет только такие метки. Заливка от имени
+          # задания новый запуск не вызывает - петли нет.
+          git tag -a "${VERSION}" -m "Выпуск ${VERSION}"
+          git push origin HEAD:master --follow-tags
           echo "Версия ${VERSION}"
 
-      # Метку, поставленную этим же заданием, GitHub не превращает в новый
-      # запуск - поэтому собираем и выкладываем здесь же.
       - name: Собрать и выложить
-        if: github.event_name == 'push' || steps.sync.outputs.changed == 'true'
+        if: steps.sync.outputs.changed == 'true'
         uses: BigWigsMods/packager@master
         with:
           # Имя архива и подпись на CurseForge - одна версия, то есть дата.
