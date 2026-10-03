@@ -9,7 +9,7 @@
 ## Dependencies: TrialGearFinder
 ## SavedVariables: ForsakenIOSettings
 ## IconTexture: Interface\AddOns\TrialGearFinder\icon
-## Version: 2026.10.03
+## Version: 2026.10.03.2
 
 Locales.lua
 db\Database.lua
