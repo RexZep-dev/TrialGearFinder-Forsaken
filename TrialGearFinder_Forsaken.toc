@@ -1,0 +1,15 @@
+## Interface: 120007, 120100
+## Title: |cffc0c0c0Trial Gear Finder|r: Forsaken Dungeons+
+## Title-ruRU: |cffc0c0c0Trial Gear Finder|r: Forsaken Dungeons+
+## Notes: Forsaken Dungeons+ rating on player tooltips and in the guild list (formerly ForsakenIO).
+## Notes-ruRU: Рейтинг Forsaken Dungeons+ в подсказке игрока и в списке гильдии (бывший ForsakenIO).
+## Author: RexZep
+## Group: TrialGearFinder
+## Dependencies: TrialGearFinder
+## SavedVariables: ForsakenIOSettings
+## IconTexture: Interface\AddOns\TrialGearFinder\icon
+## Version: 2026.10.03
+
+Locales.lua
+db\Database.lua
+Forsaken.lua

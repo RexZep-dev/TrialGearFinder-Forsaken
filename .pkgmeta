@@ -1,0 +1,16 @@
+# Модуль Forsaken Dungeons+ выходит отдельным проектом CurseForge (3 октября):
+# снимок рейтинга обновляется каждый день, ядро Trial Gear Finder - только по
+# слову автора. Папка внутри архива - имя модуля.
+package-as: TrialGearFinder_Forsaken
+
+enable-nolib-creation: no
+
+# Скрипт обновления и ядро, которое выкачивается рядом ради названий
+# подземелий, - только для сборки, игроку не нужны.
+ignore:
+  - .github
+  - .pkgmeta
+  - .gitignore
+  - tools
+  - core
+  - README.md

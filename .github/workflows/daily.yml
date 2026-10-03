@@ -1,0 +1,76 @@
+# Снимок рейтинга Forsaken Dungeons+ каждый день: скрипт берёт данные сайта,
+# и если рейтинг изменился - новая версия уходит на CurseForge сама.
+# Изменилась только дата снимка - ничего не выпускаем.
+# Запуск руками - вкладка Actions, «Run workflow». Правка кода - метка vX.Y.Z.
+
+name: Daily snapshot
+
+on:
+  schedule:
+    - cron: "0 3 * * *"   # 06:00 по Москве
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Названия подземелий на трёх языках скрипт берёт из переводов ядра.
+      - uses: actions/checkout@v4
+        if: github.event_name != 'push'
+        with:
+          repository: RexZep-dev/TrialGearFinder
+          path: core
+
+      - uses: actions/setup-node@v4
+        if: github.event_name != 'push'
+        with:
+          node-version: "22"
+
+      - name: Обновить снимок
+        if: github.event_name != 'push'
+        id: sync
+        run: |
+          TGF_CORE="$GITHUB_WORKSPACE/core" node tools/sync.js
+          # Дата снимка меняется всегда; выпускаем, только если поменялось остальное.
+          if git diff --quiet -I'generatedAt' -- db/Database.lua; then
+            echo "Рейтинг не изменился - выпуска нет."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Версия по дате, коммит и метка
+        if: github.event_name != 'push' && steps.sync.outputs.changed == 'true'
+        run: |
+          VERSION="$(date -u +%Y.%m.%d)"
+          N=1
+          while git rev-parse -q --verify "refs/tags/v$VERSION" >/dev/null; do
+            N=$((N+1)); VERSION="$(date -u +%Y.%m.%d).$N"
+          done
+          sed -i "s/^## Version:.*/## Version: ${VERSION}/" TrialGearFinder_Forsaken.toc
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add db/Database.lua TrialGearFinder_Forsaken.toc
+          git commit -m "Снимок рейтинга ${VERSION}"
+          git tag "v${VERSION}"
+          git push origin HEAD --follow-tags
+          echo "Версия ${VERSION}"
+
+      # Метку, поставленную этим же заданием, GitHub не превращает в новый
+      # запуск - поэтому собираем и выкладываем здесь же.
+      - name: Собрать и выложить
+        if: github.event_name == 'push' || steps.sync.outputs.changed == 'true'
+        uses: BigWigsMods/packager@master
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
