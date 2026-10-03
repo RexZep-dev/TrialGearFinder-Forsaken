@@ -4,6 +4,7 @@
 ## Notes: Forsaken Dungeons+ rating on player tooltips and in the guild list (formerly ForsakenIO).
 ## Notes-ruRU: Рейтинг Forsaken Dungeons+ в подсказке игрока и в списке гильдии (бывший ForsakenIO).
 ## Author: RexZep
+## X-Curse-Project-ID: 1723361
 ## Group: TrialGearFinder
 ## Dependencies: TrialGearFinder
 ## SavedVariables: ForsakenIOSettings
