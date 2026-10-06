@@ -1,7 +1,7 @@
 -- Снимок рейтинга Forsaken Dungeons+: node tools/sync.js
 -- Руками не править.
 ForsakenIODB = {
-  generatedAt = "2026-10-05T09:50:40Z",
+  generatedAt = "2026-10-06T09:38:26Z",
   season = {
     id = "season-2",
     name = "Season II",
@@ -323,8 +323,8 @@ do
     realmSlug = "ravencrest",
     class = "Воин",
     classFile = "WARRIOR",
-    spec = "Защита",
-    specID = 73,
+    spec = "Неистовство",
+    specID = 72,
     score = 2885,
     rank = 9,
     color = "ff5062",
