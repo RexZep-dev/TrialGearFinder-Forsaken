@@ -162,7 +162,11 @@ local function UnitNameRealm(unit)
 end
 
 function addon.GetProfileForUnit(unit)
-  if not unit or not UnitExists(unit) or not UnitIsPlayer(unit) then return nil end
+  -- Спрятанный указатель (моб, игрок в подземелье) игре не передаём: UnitExists
+  -- на нём - ошибка «Secret values are only allowed during untainted execution»
+  -- (тестер 6 октября, тысячи раз на мобах и в бою).
+  if not unit or IsSecret(unit) then return nil end
+  if not UnitExists(unit) or not UnitIsPlayer(unit) then return nil end
   local name, realm = UnitNameRealm(unit)
   if not name then return nil end
   return addon.GetProfile(name, realm)
@@ -253,8 +257,26 @@ local function TierGrid(tooltip)
   return grid
 end
 
-local function TextWidth(fs)
-  return (fs.GetUnboundedStringWidth and fs:GetUnboundedStringWidth()) or fs:GetStringWidth() or 0
+-- Замер надписи. Если в подсказке есть спрятанные данные (Midnight), игра
+-- прячет и размеры её строк: замер вернёт «секретное число», и любая
+-- арифметика на нём - ошибка (тестер 6 октября). Тогда считаем по шрифту:
+-- размер шрифта × число видимых букв.
+local function FontSize()
+  if not GameTooltipText then return 12 end
+  local _, size = GameTooltipText:GetFont()
+  if IsSecret(size) or type(size) ~= "number" then return 12 end
+  return size
+end
+
+local function Measure(fs, method, estimate)
+  local ok, v = pcall(fs[method], fs)
+  if ok and not IsSecret(v) and type(v) == "number" and v > 0 then return v end
+  return estimate
+end
+
+local function TextWidth(fs, text)
+  local letters = #(text:gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", ""):gsub("[\128-\191]", ""))
+  return Measure(fs, fs.GetUnboundedStringWidth and "GetUnboundedStringWidth" or "GetStringWidth", letters * FontSize() * 0.62)
 end
 
 local function AddTiers(tooltip, profile)
@@ -264,19 +286,22 @@ local function AddTiers(tooltip, profile)
   -- подземелий этого уровня зачтено (пользователь 3 октября: вместо общего
   -- числа зачётов в «Лучший уровень»). Снизу - рейтинг за этот уровень.
   local mr, mg, mb = MUTED[1] * 255, MUTED[2] * 255, MUTED[3] * 255
+  local headText, valueText = {}, {}
   for i, tier in ipairs(TIERS) do
     local c = TIER_COLOR[tier]
     local runs = tonumber(profile["runs" .. tier]) or 0
-    grid.head[i]:SetText(string.format("|cff%02x%02x%02x+%d|r |cff%02x%02x%02x(%d)|r",
-      c[1] * 255, c[2] * 255, c[3] * 255, tier, mr, mg, mb, runs))
+    headText[i] = string.format("|cff%02x%02x%02x+%d|r |cff%02x%02x%02x(%d)|r",
+      c[1] * 255, c[2] * 255, c[3] * 255, tier, mr, mg, mb, runs)
+    grid.head[i]:SetText(headText[i])
     local score = tonumber(profile["score" .. tier]) or 0
-    grid.value[i]:SetText(score > 0 and tostring(score) or "-")
+    valueText[i] = score > 0 and tostring(score) or "-"
+    grid.value[i]:SetText(valueText[i])
     if score > 0 then grid.value[i]:SetTextColor(1, 1, 1) else grid.value[i]:SetTextColor(MUTED[1], MUTED[2], MUTED[3]) end
   end
-  local rowH = math.max(grid.head[1]:GetStringHeight() or 0, 12) + 2
+  local rowH = math.max(Measure(grid.head[1], "GetStringHeight", FontSize()), 12) + 2
   local x = 0
   for i = 1, #TIERS do
-    local w = math.max(TextWidth(grid.head[i]), TextWidth(grid.value[i])) + COL_GAP
+    local w = math.max(TextWidth(grid.head[i], headText[i]), TextWidth(grid.value[i], valueText[i])) + COL_GAP
     for _, fs in ipairs({ grid.head[i], grid.value[i] }) do fs:SetWidth(w) end
     grid.head[i]:ClearAllPoints()
     grid.head[i]:SetPoint("TOPLEFT", x, 0)

@@ -42,10 +42,13 @@ jobs:
       - name: Обновить снимок и сравнить с прошлым выпуском
         id: sync
         run: |
+          LAST="$(git describe --tags --abbrev=0 2>/dev/null || true)"
+          echo "last=$LAST" >> "$GITHUB_OUTPUT"
+          # Снимок прошлого выпуска - для списка «кто сколько получил».
+          if [ -n "$LAST" ]; then git show "$LAST:db/Database.lua" > "$RUNNER_TEMP/old.lua"; fi
           node tools/sync.js
           # Что получает игрок - эти файлы. Дата снимка и номер версии не в счёт.
           FILES="TrialGearFinder_Forsaken.toc Locales.lua Forsaken.lua db/Database.lua"
-          LAST="$(git describe --tags --abbrev=0 2>/dev/null || true)"
           if [ -z "$LAST" ]; then
             echo "Выпусков ещё не было - выпускаем."
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -67,9 +70,13 @@ jobs:
             N=$((N+1)); VERSION="$(date -u +%Y.%m.%d).$N"
           done
           sed -i "s/^## Version:.*/## Version: ${VERSION}/" TrialGearFinder_Forsaken.toc
+          # Описание версии на CurseForge: кто сколько рейтинга получил и где
+          # (пользователь 8 октября). Упаковщик берёт его по manual-changelog.
+          node tools/changes.js "$RUNNER_TEMP/old.lua" db/Database.lua "${{ steps.sync.outputs.last }}" > CHANGELOG.md
+          cat CHANGELOG.md
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add db/Database.lua TrialGearFinder_Forsaken.toc
+          git add db/Database.lua TrialGearFinder_Forsaken.toc CHANGELOG.md
           git commit --allow-empty -m "Выпуск ${VERSION}"
           # Метка - просто дата (пользователь 3 октября: «назовём просто датой»),
           # из неё же подпись файла на CurseForge. С описанием (-a):

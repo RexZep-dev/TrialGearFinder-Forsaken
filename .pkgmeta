@@ -5,6 +5,12 @@ package-as: TrialGearFinder_Forsaken
 
 enable-nolib-creation: no
 
+# Описание версии - список «кто сколько рейтинга получил», его пишет
+# tools/changes.js при выпуске.
+manual-changelog:
+  filename: CHANGELOG.md
+  markup-type: markdown
+
 # Скрипт обновления и ядро, которое выкачивается рядом ради названий
 # подземелий, - только для сборки, игроку не нужны.
 ignore:
