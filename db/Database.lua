@@ -1,7 +1,7 @@
 -- Снимок рейтинга Forsaken Dungeons+: node tools/sync.js
 -- Руками не править.
 ForsakenIODB = {
-  generatedAt = "2026-10-10T09:14:50Z",
+  generatedAt = "2026-10-11T09:31:18Z",
   season = {
     id = "season-2",
     name = "Season II",
@@ -879,8 +879,8 @@ do
     realmSlug = "aggramar",
     class = "Паладин",
     classFile = "PALADIN",
-    spec = "Защита",
-    specID = 66,
+    spec = "Воздаяние",
+    specID = 70,
     score = 1187,
     rank = 24,
     color = "229eeb",
