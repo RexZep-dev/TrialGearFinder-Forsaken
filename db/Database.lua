@@ -1,7 +1,7 @@
 -- Снимок рейтинга Forsaken Dungeons+: node tools/sync.js
 -- Руками не править.
 ForsakenIODB = {
-  generatedAt = "2026-10-12T10:01:36Z",
+  generatedAt = "2026-10-13T09:54:15Z",
   season = {
     id = "season-2",
     name = "Season II",
@@ -621,8 +621,8 @@ do
     realmSlug = "azuregos",
     class = "Охотник",
     classFile = "HUNTER",
-    spec = "Стрельба",
-    specID = 254,
+    spec = "Повелитель зверей",
+    specID = 253,
     score = 1972,
     rank = 17,
     color = "8454ff",
@@ -695,8 +695,8 @@ do
     realmSlug = "eversong",
     class = "Разбойник",
     classFile = "ROGUE",
-    spec = "Ликвидация",
-    specID = 259,
+    spec = "Головорез",
+    specID = 260,
     score = 1464,
     rank = 19,
     color = "1c84ff",
