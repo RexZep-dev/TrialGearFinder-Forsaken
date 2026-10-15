@@ -20,7 +20,12 @@ function load(file) {
     return map;
 }
 
-const [oldFile, newFile, lastVersion] = process.argv.slice(2);
+// --check: ничего не печатать, код выхода 0 - рейтинг у кого-то изменился
+// (новый игрок, выбыл, другой рейтинг или зачёты по уровням ключей), 1 - нет.
+// По нему выпуск решает, выходить ли: смена спека и дата снимка не в счёт
+// (пользователь 15 октября: модуль выходил каждый день из-за спеков).
+const CHECK = process.argv.includes("--check");
+const [oldFile, newFile, lastVersion] = process.argv.slice(2).filter(a => a !== "--check");
 const before = load(oldFile), after = load(newFile);
 const who = e => `**${e.name}** (${e.realmName}) - ${e.class}, ${e.spec}`;
 const best = e => e.bestDungeon ? `лучший ключ +${e.bestDungeonTier} ${e.bestDungeon} (${e.bestDungeonScore})` : "";
@@ -43,6 +48,14 @@ rows.sort((a, b) => b.gain - a.gain);
 
 let out = `## Рейтинг Forsaken Dungeons+${lastVersion ? ` - изменения с выпуска ${lastVersion}` : ""}\n\n`;
 out += rows.length ? rows.map(r => r.line).join("\n") + "\n" : "Рейтинг не изменился - обновлён сам модуль.\n";
-const gone = [...before.keys()].filter(k => !after.has(k)).map(k => before.get(k));
+// Выбыл - был с рейтингом и пропал. Игроков без рейтинга снимок с 15 октября
+// не хранит - их исчезновение не в счёт.
+const gone = [...before.keys()].filter(k => !after.has(k) && before.get(k).score > 0).map(k => before.get(k));
 if (gone.length) out += `\nВыбыли из таблицы: ${gone.map(e => `${e.name} (${e.realmName})`).join(", ")}\n`;
+if (CHECK) {
+    const tiers = (a, b) => TIERS.some(t => (a["score" + t] || 0) !== (b["score" + t] || 0) || (a["runs" + t] || 0) !== (b["runs" + t] || 0));
+    const changed = rows.length > 0 || gone.length > 0
+        || [...after].some(([k, e]) => before.has(k) && tiers(before.get(k), e));
+    process.exit(changed ? 0 : 1);
+}
 process.stdout.write(out);

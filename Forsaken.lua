@@ -196,8 +196,10 @@ local MUTED = { 0.65, 0.65, 0.70 }
 
 -- Возраст снимка в днях по generatedAt («2026-10-03T09:12:00Z»). Время UTC
 -- читается как местное - ошибка в часы, для счёта дней не важно.
--- Снимок обновляется каждый день, поэтому 3 дня - уже повод обновить аддон.
-local STALE_DAYS = 3
+-- Снимок выходит, только когда у кого-то изменился рейтинг (с 15 октября),
+-- между сезонами - неделями без выпусков. Поэтому порог 14 дней: раньше
+-- было 3, и при редких выпусках предупреждение врало бы.
+local STALE_DAYS = 14
 function addon.SnapshotAgeDays()
   local at = type(ForsakenIODB) == "table" and ForsakenIODB.generatedAt
   if type(at) ~= "string" or not time then return nil end
@@ -280,7 +282,7 @@ local function TextWidth(fs, text)
 end
 
 local function AddTiers(tooltip, profile)
-  if not GameTooltip_InsertFrame then return end
+  if not tooltip.GetName or not tooltip:GetName() then return end
   local grid = TierGrid(tooltip)
   -- Сверху «+20 (8)»: уровень ключа его цветом, в скобках - сколько
   -- подземелий этого уровня зачтено (пользователь 3 октября: вместо общего
@@ -310,10 +312,26 @@ local function AddTiers(tooltip, profile)
     x = x + w
   end
   grid:SetSize(x, rowH * 2)
-  GameTooltip_InsertFrame(tooltip, grid)
-  -- InsertFrame ставит минимум ширины подсказки = ширине таблицы, но в него
-  -- входят и поля подсказки: у узкой подсказки последний столбец обрезался
-  -- в «3…» (3 октября). Запас на поля; при очистке подсказки снимаем -
+  -- Вставка своя, не GameTooltip_InsertFrame: та меряет высоту строки и
+  -- ширину самой подсказки, а при наведении на себя игра их прячет -
+  -- арифметика на «секретном числе» падала внутри кода Blizzard с виной
+  -- на модуль (тестер 12 октября, SharedTooltipTemplates.lua:202). Здесь
+  -- всё считается от наших чисел: пустые строки под таблицу по шрифту.
+  local current = tooltip:NumLines()
+  if IsSecret(current) or type(current) ~= "number" then grid:Hide() return end
+  local need = math.ceil(rowH * 2 / (FontSize() + 2))
+  for _ = 1, need do tooltip:AddLine(" ") end
+  local anchor = _G[tooltip:GetName() .. "TextLeft" .. (current + 1)]
+  if not anchor then grid:Hide() return end
+  grid:SetParent(tooltip)
+  grid:ClearAllPoints()
+  grid:SetPoint("TOPLEFT", anchor, "TOPLEFT", 0, 0)
+  grid:Show()
+  -- В список вставленных - игра сама спрячет таблицу при очистке подсказки.
+  tooltip.insertedFrames = tooltip.insertedFrames or {}
+  tooltip.insertedFrames[#tooltip.insertedFrames + 1] = grid
+  -- Минимум ширины = таблица + поля подсказки: у узкой подсказки последний
+  -- столбец обрезался в «3…» (3 октября). При очистке подсказки снимаем -
   -- игра сама его не сбрасывает.
   tooltip:SetMinimumWidth(x + 24)
   tooltip.ForsakenIOMinWidth = true

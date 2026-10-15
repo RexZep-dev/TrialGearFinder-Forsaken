@@ -69,7 +69,10 @@ const get = async p => { const r = await fetch(BASE + p); if (!r.ok) throw new E
     const cur = await get("/api/season/current");
     const lb = await get("/api/leaderboard-detailed?mode=season");
     const season = lb.season || cur.season || (cur.status && cur.status.rankingSeason) || {};
-    const rows = lb.leaderboard || [];
+    // Только игроки с рейтингом (пользователь 15 октября: «только те, кто
+    // зарегался»): на сайте есть персонажи без единого зачётного ключа -
+    // 28 из 78 на 15 октября. Им в подсказке показывать нечего.
+    const rows = (lb.leaderboard || []).filter(r => +r.score > 0);
     const unknown = new Set();
     let out = `-- Снимок рейтинга Forsaken Dungeons+: node tools/sync.js
 -- Руками не править.

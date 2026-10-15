@@ -47,18 +47,24 @@ jobs:
           # Снимок прошлого выпуска - для списка «кто сколько получил».
           if [ -n "$LAST" ]; then git show "$LAST:db/Database.lua" > "$RUNNER_TEMP/old.lua"; fi
           node tools/sync.js
-          # Что получает игрок - эти файлы. Дата снимка и номер версии не в счёт.
-          FILES="TrialGearFinder_Forsaken.toc Locales.lua Forsaken.lua db/Database.lua"
+          # Выпуск - только если у кого-то изменился рейтинг или изменился сам
+          # модуль (пользователь 15 октября: выходил каждый день, хотя менялись
+          # только спеки игроков). Смена спека, дата снимка, номер версии - не в счёт.
+          CODE="TrialGearFinder_Forsaken.toc Locales.lua Forsaken.lua"
           if [ -z "$LAST" ]; then
             echo "Выпусков ещё не было - выпускаем."
             echo "changed=true" >> "$GITHUB_OUTPUT"
-          elif git diff --quiet -I'generatedAt' -I'^## Version:' "$LAST" -- $FILES; then
-            echo "С выпуска $LAST у игрока ничего не поменялось - выпуска нет."
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "Поменялось с выпуска $LAST:"
-            git diff --stat -I'generatedAt' -I'^## Version:' "$LAST" -- $FILES
+          elif node tools/changes.js --check "$RUNNER_TEMP/old.lua" db/Database.lua; then
+            echo "С выпуска $LAST изменился рейтинг:"
+            node tools/changes.js "$RUNNER_TEMP/old.lua" db/Database.lua "$LAST"
             echo "changed=true" >> "$GITHUB_OUTPUT"
+          elif ! git diff --quiet -I'^## Version:' "$LAST" -- $CODE; then
+            echo "С выпуска $LAST изменился модуль:"
+            git diff --stat -I'^## Version:' "$LAST" -- $CODE
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "С выпуска $LAST рейтинг и модуль не менялись - выпуска нет."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Версия по дате, коммит и метка
