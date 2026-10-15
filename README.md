@@ -6,8 +6,9 @@
 по уровням ключа (+20 … +45). Бывший аддон ForsakenIO.
 
 Аддоны в игре не выходят в интернет, поэтому данные — снимок сайта внутри
-модуля. Снимок обновляется каждый день: если рейтинг изменился, выходит новая
-версия. Снимку больше трёх дней — подсказка об этом скажет.
+модуля. Снимок проверяется три раза в неделю: если у кого-то изменился
+рейтинг, выходит новая версия. Снимку больше двух недель — подсказка об этом
+скажет.
 
 Как выпускать новые версии — [RELEASING.md](RELEASING.md).
 
@@ -17,5 +18,5 @@
 ---
 
 A Trial Gear Finder module: Forsaken Dungeons+ rating on player tooltips and
-in the guild list. Addons can't reach the internet, so the data is a daily
-snapshot of the site shipped inside the module.
+in the guild list. Addons can't reach the internet, so the data is a snapshot
+of the site shipped inside the module, refreshed up to three times a week.
