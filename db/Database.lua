@@ -1,7 +1,7 @@
 -- Снимок рейтинга Forsaken Dungeons+: node tools/sync.js
 -- Руками не править.
 ForsakenIODB = {
-  generatedAt = "2026-10-15T01:38:23Z",
+  generatedAt = "2026-10-15T01:39:15Z",
   season = {
     id = "season-2",
     name = "Season II",
